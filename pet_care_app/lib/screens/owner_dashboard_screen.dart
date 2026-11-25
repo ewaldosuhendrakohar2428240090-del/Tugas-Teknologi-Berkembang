@@ -11,7 +11,7 @@ import 'login_screen.dart';
 class OwnerDashboardScreen extends StatefulWidget {
   final UserModel user;
 
-  const OwnerDashboardScreen({Key? key, required this.user}) : super(key: key);
+  const OwnerDashboardScreen({super.key, required this.user});
 
   @override
   State<OwnerDashboardScreen> createState() => _OwnerDashboardScreenState();
@@ -190,7 +190,7 @@ class _OwnerDashboardScreenState extends State<OwnerDashboardScreen> {
                       children: [
                         CircleAvatar(
                           radius: 20,
-                          backgroundColor: _categoryColor(sale.serviceCategory).withOpacity(0.15),
+                          backgroundColor: _categoryColor(sale.serviceCategory).withValues(alpha: 0.15),
                           child: Icon(
                             _categoryIcon(sale.serviceCategory),
                             color: _categoryColor(sale.serviceCategory),
@@ -536,7 +536,7 @@ class _OwnerDashboardScreenState extends State<OwnerDashboardScreen> {
             borderRadius: BorderRadius.circular(20),
             boxShadow: [
               BoxShadow(
-                color: AppTheme.primary.withOpacity(0.3),
+                color: AppTheme.primary.withValues(alpha: 0.3),
                 blurRadius: 20,
                 offset: const Offset(0, 8),
               ),
@@ -553,13 +553,13 @@ class _OwnerDashboardScreenState extends State<OwnerDashboardScreen> {
                     style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w500,
-                      color: Colors.white.withOpacity(0.85),
+                      color: Colors.white.withValues(alpha: 0.85),
                     ),
                   ),
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                     decoration: BoxDecoration(
-                      color: Colors.white.withOpacity(0.2),
+                      color: Colors.white.withValues(alpha: 0.2),
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: const Row(
@@ -591,7 +591,7 @@ class _OwnerDashboardScreenState extends State<OwnerDashboardScreen> {
                 '$_totalTransactions transaksi selesai',
                 style: TextStyle(
                   fontSize: 13,
-                  color: Colors.white.withOpacity(0.75),
+                  color: Colors.white.withValues(alpha: 0.75),
                 ),
               ),
             ],
@@ -633,7 +633,7 @@ class _OwnerDashboardScreenState extends State<OwnerDashboardScreen> {
                 Container(
                   padding: const EdgeInsets.all(6),
                   decoration: BoxDecoration(
-                    color: color.withOpacity(0.12),
+                    color: color.withValues(alpha: 0.12),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: Icon(icon, color: color, size: 16),
@@ -674,7 +674,7 @@ class _OwnerDashboardScreenState extends State<OwnerDashboardScreen> {
         border: Border.all(color: AppTheme.borderLight),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.02),
+            color: Colors.black.withValues(alpha: 0.02),
             blurRadius: 8,
             offset: const Offset(0, 2),
           ),
@@ -686,7 +686,7 @@ class _OwnerDashboardScreenState extends State<OwnerDashboardScreen> {
             children: [
               CircleAvatar(
                 radius: 22,
-                backgroundColor: color.withOpacity(0.12),
+                backgroundColor: color.withValues(alpha: 0.12),
                 child: Icon(_categoryIcon(sale.serviceCategory), color: color, size: 22),
               ),
               const SizedBox(width: 12),
@@ -770,7 +770,7 @@ class _OwnerDashboardScreenState extends State<OwnerDashboardScreen> {
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                 decoration: BoxDecoration(
-                  color: color.withOpacity(0.1),
+                  color: color.withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: Text(

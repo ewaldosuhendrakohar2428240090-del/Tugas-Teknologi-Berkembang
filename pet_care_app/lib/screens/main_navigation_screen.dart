@@ -9,10 +9,10 @@ class MainNavigationScreen extends StatefulWidget {
   final bool startAsStaff;
 
   const MainNavigationScreen({
-    Key? key,
+    super.key,
     this.user,
     this.startAsStaff = false,
-  }) : super(key: key);
+  });
 
   @override
   State<MainNavigationScreen> createState() => _MainNavigationScreenState();

@@ -8,11 +8,11 @@ class QrCodeWidget extends StatelessWidget {
   final Color color;
 
   const QrCodeWidget({
-    Key? key,
+    super.key,
     required this.data,
     this.size = 180,
     this.color = AppTheme.primaryDark,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class QrCodeWidget extends StatelessWidget {
         border: Border.all(color: AppTheme.borderLight, width: 2),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.04),
+            color: Colors.black.withValues(alpha: 0.04),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),

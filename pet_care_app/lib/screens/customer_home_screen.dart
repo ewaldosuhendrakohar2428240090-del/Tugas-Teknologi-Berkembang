@@ -16,11 +16,11 @@ class CustomerHomeScreen extends StatefulWidget {
   final VoidCallback? onLogout;
 
   const CustomerHomeScreen({
-    Key? key,
+    super.key,
     required this.onSwitchToStaff,
     this.user,
     this.onLogout,
-  }) : super(key: key);
+  });
 
   @override
   State<CustomerHomeScreen> createState() => _CustomerHomeScreenState();
@@ -270,7 +270,7 @@ class _CustomerHomeScreenState extends State<CustomerHomeScreen> {
           ),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.03),
+              color: Colors.black.withValues(alpha: 0.03),
               blurRadius: 10,
               offset: const Offset(0, 4),
             ),
@@ -391,7 +391,7 @@ class _CustomerHomeScreenState extends State<CustomerHomeScreen> {
           Container(
             padding: const EdgeInsets.all(10),
             decoration: BoxDecoration(
-              color: tagColor.withOpacity(0.12),
+              color: tagColor.withValues(alpha: 0.12),
               borderRadius: BorderRadius.circular(12),
             ),
             child: Icon(

@@ -9,11 +9,11 @@ class LivePickupAlertCard extends StatefulWidget {
   final VoidCallback onRefresh;
 
   const LivePickupAlertCard({
-    Key? key,
+    super.key,
     required this.order,
     required this.onTapPass,
     required this.onRefresh,
-  }) : super(key: key);
+  });
 
   @override
   State<LivePickupAlertCard> createState() => _LivePickupAlertCardState();
@@ -88,7 +88,7 @@ class _LivePickupAlertCardState extends State<LivePickupAlertCard> with SingleTi
           ),
           boxShadow: [
             BoxShadow(
-              color: (isDelayed ? AppTheme.delayedRed : AppTheme.readyGreen).withOpacity(0.2),
+              color: (isDelayed ? AppTheme.delayedRed : AppTheme.readyGreen).withValues(alpha: 0.2),
               blurRadius: 16,
               offset: const Offset(0, 6),
             ),

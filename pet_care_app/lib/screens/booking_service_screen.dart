@@ -6,7 +6,7 @@ import '../services/api_service.dart';
 import '../theme/app_theme.dart';
 
 class BookingServiceScreen extends StatefulWidget {
-  const BookingServiceScreen({Key? key}) : super(key: key);
+  const BookingServiceScreen({super.key});
 
   @override
   State<BookingServiceScreen> createState() => _BookingServiceScreenState();
@@ -197,7 +197,7 @@ class _BookingServiceScreenState extends State<BookingServiceScreen> {
                               Container(
                                 padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                                 decoration: BoxDecoration(
-                                  color: tagColor.withOpacity(0.12),
+                                  color: tagColor.withValues(alpha: 0.12),
                                   borderRadius: BorderRadius.circular(6),
                                 ),
                                 child: Text(

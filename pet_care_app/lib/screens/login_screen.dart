@@ -8,7 +8,7 @@ import 'main_navigation_screen.dart';
 import 'owner_dashboard_screen.dart';
 
 class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+  const LoginScreen({super.key});
 
   @override
   State<LoginScreen> createState() => _LoginScreenState();
@@ -225,12 +225,12 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
           width: 90,
           height: 90,
           decoration: BoxDecoration(
-            color: Colors.white.withOpacity(0.2),
+            color: Colors.white.withValues(alpha: 0.2),
             shape: BoxShape.circle,
-            border: Border.all(color: Colors.white.withOpacity(0.3), width: 2),
+            border: Border.all(color: Colors.white.withValues(alpha: 0.3), width: 2),
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withOpacity(0.15),
+                color: Colors.black.withValues(alpha: 0.15),
                 blurRadius: 30,
                 spreadRadius: 5,
               ),
@@ -255,7 +255,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
           'Pet Care & Pickup Tracker',
           style: TextStyle(
             fontSize: 14,
-            color: Colors.white.withOpacity(0.85),
+            color: Colors.white.withValues(alpha: 0.85),
             fontWeight: FontWeight.w500,
             letterSpacing: 0.5,
           ),
@@ -273,7 +273,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
         borderRadius: BorderRadius.circular(24),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.12),
+            color: Colors.black.withValues(alpha: 0.12),
             blurRadius: 40,
             offset: const Offset(0, 16),
           ),
@@ -410,7 +410,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
             style: TextStyle(
               fontSize: 13,
               fontWeight: FontWeight.w600,
-              color: Colors.white.withOpacity(0.85),
+              color: Colors.white.withValues(alpha: 0.85),
             ),
           ),
           const SizedBox(height: 10),
@@ -427,10 +427,10 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                   duration: const Duration(milliseconds: 200),
                   padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
                   decoration: BoxDecoration(
-                    color: isSelected ? Colors.white : Colors.white.withOpacity(0.18),
+                    color: isSelected ? Colors.white : Colors.white.withValues(alpha: 0.18),
                     borderRadius: BorderRadius.circular(12),
                     border: Border.all(
-                      color: isSelected ? AppTheme.primary : Colors.white.withOpacity(0.3),
+                      color: isSelected ? AppTheme.primary : Colors.white.withValues(alpha: 0.3),
                       width: isSelected ? 2 : 1,
                     ),
                   ),

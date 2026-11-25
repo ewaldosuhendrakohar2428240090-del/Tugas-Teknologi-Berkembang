@@ -6,7 +6,7 @@ import '../widgets/qr_code_widget.dart';
 class PickupPassScreen extends StatelessWidget {
   final OrderModel order;
 
-  const PickupPassScreen({Key? key, required this.order}) : super(key: key);
+  const PickupPassScreen({super.key, required this.order});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,7 @@ class PickupPassScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(24),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withOpacity(0.3),
+                      color: Colors.black.withValues(alpha: 0.3),
                       blurRadius: 20,
                       offset: const Offset(0, 10),
                     ),
@@ -271,7 +271,7 @@ class PickupPassScreen extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(14),
                 decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.08),
+                  color: Colors.white.withValues(alpha: 0.08),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: const Row(

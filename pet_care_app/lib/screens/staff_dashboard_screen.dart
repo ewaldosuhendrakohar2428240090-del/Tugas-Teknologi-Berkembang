@@ -7,7 +7,7 @@ import 'tracking_detail_screen.dart';
 class StaffDashboardScreen extends StatefulWidget {
   final VoidCallback onSwitchToCustomer;
 
-  const StaffDashboardScreen({Key? key, required this.onSwitchToCustomer}) : super(key: key);
+  const StaffDashboardScreen({super.key, required this.onSwitchToCustomer});
 
   @override
   State<StaffDashboardScreen> createState() => _StaffDashboardScreenState();
@@ -252,7 +252,7 @@ class _StaffDashboardScreenState extends State<StaffDashboardScreen> {
           width: isDelayed || order.isReadyForPickup ? 1.5 : 1,
         ),
         boxShadow: [
-          BoxShadow(color: Colors.black.withOpacity(0.04), blurRadius: 8, offset: const Offset(0, 3)),
+          BoxShadow(color: Colors.black.withValues(alpha: 0.04), blurRadius: 8, offset: const Offset(0, 3)),
         ],
       ),
       child: Padding(

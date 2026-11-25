@@ -8,10 +8,10 @@ class TrackingStepperWidget extends StatelessWidget {
   final bool isSteril;
 
   const TrackingStepperWidget({
-    Key? key,
+    super.key,
     required this.steps,
     this.isSteril = false,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -65,7 +65,7 @@ class TrackingStepperWidget extends StatelessWidget {
                   ),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withOpacity(0.02),
+                      color: Colors.black.withValues(alpha: 0.02),
                       blurRadius: 6,
                       offset: const Offset(0, 2),
                     ),
@@ -179,7 +179,7 @@ class TrackingStepperWidget extends StatelessWidget {
                               child: Container(
                                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                                 decoration: BoxDecoration(
-                                  color: Colors.black.withOpacity(0.6),
+                                  color: Colors.black.withValues(alpha: 0.6),
                                   borderRadius: BorderRadius.circular(6),
                                 ),
                                 child: const Row(

@@ -10,7 +10,7 @@ import 'pickup_pass_screen.dart';
 class TrackingDetailScreen extends StatefulWidget {
   final int orderId;
 
-  const TrackingDetailScreen({Key? key, required this.orderId}) : super(key: key);
+  const TrackingDetailScreen({super.key, required this.orderId});
 
   @override
   State<TrackingDetailScreen> createState() => _TrackingDetailScreenState();
@@ -247,7 +247,7 @@ class _TrackingDetailScreenState extends State<TrackingDetailScreen> {
         decoration: BoxDecoration(
           color: Colors.white,
           boxShadow: [
-            BoxShadow(color: Colors.black.withOpacity(0.06), blurRadius: 10, offset: const Offset(0, -4)),
+            BoxShadow(color: Colors.black.withValues(alpha: 0.06), blurRadius: 10, offset: const Offset(0, -4)),
           ],
         ),
         child: SafeArea(
